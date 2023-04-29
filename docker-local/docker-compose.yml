@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    container_name: "task.mongo"
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./db:/data/db
+    networks:
+      - mongo-compose-network
+
+networks:
+  mongo-compose-network:
+    driver: bridge
