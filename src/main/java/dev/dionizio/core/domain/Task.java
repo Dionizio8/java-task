@@ -8,5 +8,7 @@ import lombok.Getter;
 @Getter
 @Builder
 public class Task {
-    private String name;
+    private String title;
+    private String description;
+    private TaskStatus status;
 }
